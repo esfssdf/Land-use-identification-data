@@ -10,7 +10,7 @@ data/
 ├── hypergraph_edges.csv         # Hyperedge definitions
 ├── spatial_network.csv          # Spatial edges with weights
 ├── ground_truth_labels.csv      # Ground truth land use proportions
-└── TAZ.zip      		             # Traffic Analysis Zone
+└── TAZ.zip                      # Traffic Analysis Zone
 ```
 
 ## Data Files Description
@@ -32,4 +32,5 @@ This data was derived from the spatial distances between adjacent TAZs in Shangh
 
 ### 6. ground_truth_labels.csv (Ground Truth Labels)
 Provides land use proportion distributions for model training and validation, containing columns for TAZID plus 6 land use type proportion columns (commercial, resident, industrial, public, transport, other). The data is derived from urban functional classification data from Peking University's Urban Landscape Foundation Dataset (http://geoscape.pku.edu.cn/en.html), which was produced based on remote sensing data and POI data with manual correction in 2019. The original 9 land use types are reclassified by merging water bodies, forests/green spaces, farmland, and undeveloped areas into an "other" category, and area proportions are calculated for each land use type within every TAZ boundary to generate 6-dimensional proportion vectors. Note: The provided CSV file contains simulated data for demonstration purposes.
+
 
