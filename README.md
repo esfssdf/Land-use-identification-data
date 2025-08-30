@@ -6,11 +6,11 @@
 data/
 ├── node_attributes.csv          # Node attributes
 ├── transition_matrix.csv        # Third-order transition matrix
-├── poi_remote_features.csv  # POI & remote sensing features
-├── hypergraph_edges.csv     # Hyperedge definitions
+├── poi_remote_features.csv      # POI & remote sensing features
+├── hypergraph_edges.csv         # Hyperedge definitions
 ├── spatial_network.csv          # Spatial edges with weights
-├── ground_truth_labels.csv   # Ground truth land use proportions
-└── TAZ.zip      		# Traffic Analysis Zone
+├── ground_truth_labels.csv      # Ground truth land use proportions
+└── TAZ.zip      		             # Traffic Analysis Zone
 ```
 
 ## Data Files Description
@@ -28,7 +28,7 @@ Contains 64-dimensional features combining POI semantic and remote sensing visua
 Defines hyperedge structures connecting functionally similar regions, with a column containing FID_TAZ values as underscore-separated node IDs that define hyperedges. The data is derived from human mobility patterns extracted from mobile phone signaling data by decomposing pedestrian flow curves into 8 temporal views with 3-hour windows, applying DBSCAN clustering within each view to identify homogeneous functional clusters, and forming hyperedges from each density cluster that connects multiple TAZ nodes sharing similar temporal flow patterns despite spatial separation. Note: The provided CSV file contains simulated data for demonstration purposes.
 
 ### 5. spatial_network.csv (SLM Module)
-This data was derived from the spatial distances between adjacent TAZs in Shanghai and a Gaussian decay function to simulate the proximity similarity between urban blocks (for the SLM). The actual Shanghai TAZ shp data is stored in the “TAZ.zip” file within the same folder path. This dataset comprises three columns: TAZID1 (TAZ1 ID), TAZID2 (TAZ2 ID), and disEffect (weight).
+This data was derived from the spatial distances between adjacent TAZs in Shanghai and a Gaussian decay function to simulate the proximity similarity between urban blocks (for the SLM). The actual Shanghai TAZ shp data is stored in the “TAZ.zip” file within the same folder path. This data comprises three columns: TAZID1 (TAZ1 ID), TAZID2 (TAZ2 ID), and disEffect (weight).
 
 ### 6. ground_truth_labels.csv (Ground Truth Labels)
 Provides land use proportion distributions for model training and validation, containing columns for TAZID plus 6 land use type proportion columns (commercial, resident, industrial, public, transport, other). The data is derived from urban functional classification data from Peking University's Urban Landscape Foundation Dataset (http://geoscape.pku.edu.cn/en.html), which was produced based on remote sensing data and POI data with manual correction in 2019. The original 9 land use types are reclassified by merging water bodies, forests/green spaces, farmland, and undeveloped areas into an "other" category, and area proportions are calculated for each land use type within every TAZ boundary to generate 6-dimensional proportion vectors. Note: The provided CSV file contains simulated data for demonstration purposes.
