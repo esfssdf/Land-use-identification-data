@@ -4,11 +4,11 @@
 
 ```
 data/
-├── node_attributes.csv          # Node attributes (HIM input features)
+├── node_attributes.csv          # Node attributes
 ├── transition_matrix.csv        # Third-order transition matrix
-├── poi_remote_features.csv  # POI & remote sensing features (HTLM)
-├── hypergraph_edges.csv     # Hyperedge definitions (HTLM)
-├── spatial_network.csv          # Spatial edges with weights (SLM)
+├── poi_remote_features.csv  # POI & remote sensing features
+├── hypergraph_edges.csv     # Hyperedge definitions
+├── spatial_network.csv          # Spatial edges with weights
 ├── ground_truth_labels.csv   # Ground truth land use proportions
 └── TAZ.zip      		# Traffic Analysis Zone
 ```
